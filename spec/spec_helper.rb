@@ -30,6 +30,7 @@ RSpec.configure do |config|
   end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  I18n.enforce_available_locales = false
   config.expose_current_running_example_as :example
    config.deprecation_stream = 'log/rspec-deprecations.log'
 

@@ -18,6 +18,6 @@ feature 'Creating Projects' do
     title = "rocknroll - Projects - ProjectManager"
     expect(page).to have_title(title)
 
-    expect(page).to have_content('Project has been created.')
+    expect(page).to have_content('Project has been successfully created.')
   end
 end

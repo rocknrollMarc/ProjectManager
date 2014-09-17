@@ -11,6 +11,13 @@ feature 'Creating Projects' do
 
     click_button 'Create Project'
 
+    project = Project.where(name: "rocknroll").first
+
+    expect(page.current_url).to eql(project_url(project))
+
+    title = "rocknroll - Projects - ProjectManager"
+    expect(page).to have_title(title)
+
     expect(page).to have_content('Project has been created.')
   end
 end

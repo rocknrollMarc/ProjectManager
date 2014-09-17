@@ -4,7 +4,15 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @projects = Project.new
+    @project = Project.new
+  end
+
+  def create
+    @project = Project.new(params[:project])
+
+    if @project.save
+      flash[:notice] = "Project has been successfully created."
+    end
   end
 
 end

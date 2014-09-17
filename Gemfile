@@ -38,7 +38,6 @@ group :test, :development do
   gem 'guard-bundler'
   gem 'growl'
   gem 'terminal-notifier-guard'
-  gem 'rb-fsevent'
 end
 
 group :test do

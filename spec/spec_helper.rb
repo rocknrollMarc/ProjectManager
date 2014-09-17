@@ -25,10 +25,16 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
 
+  config.expect_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.expose_current_running_example_as :example
+   config.deprecation_stream = 'log/rspec-deprecations.log'
 
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
+   #If you're not using ActiveRecord, or you'd prefer not to run each of your
+  #se_current_running_example_as :example
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true

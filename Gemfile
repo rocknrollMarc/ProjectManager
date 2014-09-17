@@ -34,6 +34,10 @@ end
 
 group :test, :development do
   gem 'rspec-rails', "~> 2.14"
+  gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'growl'
+  gem 'terminal-notifier-guard'
 end
 
 group :test do

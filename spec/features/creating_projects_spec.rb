@@ -15,7 +15,7 @@ feature 'Creating Projects' do
 
     expect(page.current_url).to eql(project_url(project))
 
-    title = "rocknroll - Projects - ProjectManager"
+    title = "rocknroll - Project - ProjectManager"
     expect(page).to have_title(title)
 
     expect(page).to have_content('Project has been successfully created.')

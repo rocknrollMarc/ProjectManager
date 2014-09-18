@@ -11,11 +11,6 @@ feature "Editing projects" do
 
   scenario "Updating a project" do
     FactoryGirl.create(:project, name: "rocknroll")
-
-    visit '/'
-    click_link "rocknroll"
-    click_link "Edit Project"
-
     fill_in "Name", with: "rocknroll beta"
     click_button "Update Project"
 
@@ -26,6 +21,6 @@ feature "Editing projects" do
     fill_in "Name", with: ""
     click_button "Update Project"
 
-    expect(page).to have_content("Project has been updated.")
+    expect(page).to have_content("Project has not been updated.")
   end
 end

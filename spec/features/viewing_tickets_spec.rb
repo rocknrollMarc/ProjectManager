@@ -19,7 +19,7 @@ feature "Viewing tickets" do
     click_link "rocknroll"
 
     expect(page).to have_content("Make it shiny!")
-    expect(page).to have_content("Standards compliance")
+    expect(page).to_not have_content("Standards compliance")
 
     click_link "Make it shiny!"
     within("#ticket h2") do

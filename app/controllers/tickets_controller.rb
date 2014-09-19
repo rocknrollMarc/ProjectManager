@@ -21,6 +21,14 @@ class TicketsController < ApplicationController
 
   end
 
+  def update
+    if @ticket.update(ticket_params)
+      flash[:notice] = "TTicket has been updated"
+
+      render action: "edit"
+    end
+  end
+
   private
 
   def ticket_params

@@ -17,6 +17,10 @@ class TicketsController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
   private
 
   def ticket_params
